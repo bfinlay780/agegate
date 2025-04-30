@@ -1,51 +1,59 @@
-<style>
-  #ageGate {
-    position: fixed;
-    z-index: 9999;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(48, 0, 14, 0.95); /* deep wine tone */
-    color: #fff;
-    font-family: 'Georgia', serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond the Weekend Giveaway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #ageGate {
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(48, 0, 14, 0.95);
+      color: #fff;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-  #ageGate h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
+    #ageGate h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
 
-  #ageGate p {
-    font-size: 18px;
-    margin-bottom: 24px;
-  }
+    #ageGate p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
 
-  #ageGate button {
-    background-color: #fff;
-    color: #600016;
-    border: none;
-    padding: 14px 28px;
-    margin: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Georgia', serif;
-    transition: all 0.3s ease;
-  }
+    #ageGate button {
+      background-color: #fff;
+      color: #600016;
+      border: none;
+      padding: 14px 28px;
+      margin: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+      transition: all 0.3s ease;
+    }
 
-  #ageGate button:hover {
-    background-color: #ffcc00;
-    color: #000;
-  }
-</style>
+    #ageGate button:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;">
 
 <div id="ageGate">
   <h1>Are You 18 or Older?</h1>
@@ -53,6 +61,9 @@
   <button onclick="ageConfirm(true)">Yes – Enter Site</button>
   <button onclick="ageConfirm(false)">No – Exit</button>
 </div>
+
+<iframe id="mc-landing" src="https://mailchi.mp/wineandbeyond.ca/beyondtheweekend" 
+  style="width:100%; height:100vh; border:none;"></iframe>
 
 <script>
   function ageConfirm(isOfAge) {
@@ -70,3 +81,6 @@
     }
   };
 </script>
+
+</body>
+</html>
