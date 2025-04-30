@@ -1,0 +1,72 @@
+<style>
+  #ageGate {
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(48, 0, 14, 0.95); /* deep wine tone */
+    color: #fff;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #ageGate h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  #ageGate p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  #ageGate button {
+    background-color: #fff;
+    color: #600016;
+    border: none;
+    padding: 14px 28px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+  }
+
+  #ageGate button:hover {
+    background-color: #ffcc00;
+    color: #000;
+  }
+</style>
+
+<div id="ageGate">
+  <h1>Are You 18 or Older?</h1>
+  <p>You must be of legal drinking age to enter this contest.</p>
+  <button onclick="ageConfirm(true)">Yes – Enter Site</button>
+  <button onclick="ageConfirm(false)">No – Exit</button>
+</div>
+
+<script>
+  function ageConfirm(isOfAge) {
+    if (isOfAge) {
+      document.getElementById('ageGate').style.display = 'none';
+      sessionStorage.setItem('ageVerified', 'true');
+    } else {
+      window.location.href = 'https://www.google.com';
+    }
+  }
+
+  window.onload = function () {
+    if (sessionStorage.getItem('ageVerified') === 'true') {
+      document.getElementById('ageGate').style.display = 'none';
+    }
+  };
+</script>
